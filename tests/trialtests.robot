@@ -8,7 +8,7 @@ Default Tags              dev1
 
 *** Test Cases ***
 Bicycle Object Test
-@Tags dev1
+    [Tags]    reg
     Home
     LaunchApp             Bicycles        #Test will fail at this point until custom tab is created
     ClickText             New                         partial_match=False
