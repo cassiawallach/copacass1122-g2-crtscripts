@@ -7,8 +7,30 @@ Suite Teardown    End suite
 Default Tags      dev1
 
 *** Test Cases ***
+Create Account record   
+    [Tags]        reg
+    LaunchApp     Sales
+    ClickText     Accounts
+    ClickText     New
+    UseModal      On
+    ClickText     Next
+    TypeText      *Account Name               CRT_Test_Account
+    PickList      Type                        Competitor
+    ClickText     Save                        partial_match=False
+    UseModal      Off
+    ClickText     Details
+    VerifyText    CRT_Test_Account
+    ClickText     Show more actions
+    ClickText     Delete
+    UseModal      On
+    ClickText     Delete
+    ClickText     Home
+
+
+
+
 Prank Tracker App Test
-    [Tags]        DM                        
+    [Tags]        DM
     Home
     #launch DM Prank Tracker App
     LaunchApp     DMPC Prank Tracker
