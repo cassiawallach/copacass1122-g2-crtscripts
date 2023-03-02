@@ -10,7 +10,6 @@ Default Tags      dev1
 Prankster Object Test
     [Tags]        DM
     Home
-
     LaunchApp     Pranksters
     ClickText     New
     UseModal      On
