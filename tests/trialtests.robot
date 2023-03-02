@@ -9,6 +9,7 @@ Default Tags      dev1
 *** Test Cases ***
 Create Account record   
     [Tags]        reg
+    Home
     LaunchApp     Sales
     ClickText     Accounts
     ClickText     New
