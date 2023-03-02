@@ -1,24 +1,24 @@
 *** Settings ***
-Library                   QWeb
-Library                   QForce
-Resource                  ../resources/common.robot
-Suite Setup               Setup Browser
-Suite Teardown            End suite
-Default Tags              dev1
+Library           QWeb
+Library           QForce
+Resource          ../resources/common.robot
+Suite Setup       Setup Browser
+Suite Teardown    End suite
+Default Tags      dev1
 
 *** Test Cases ***
-Bicycle Object Test
-    [Tags]    reg
+Prankster Object Test
+    [Tags]        DM
     Home
-    LaunchApp             Bicycles        #Test will fail at this point until custom tab is created
-    ClickText             New                         partial_match=False
-    TypeText              *Bicycle Name               Test Bike Record
-    PickList              Type                        Road
-    ClickText             Save                        partial_match=False
-    VerifyField           Bicycle Name                Test Bike Record
-    VerifyField           Type                        Road
-    ClickText             Show more actions
-    ClickText             Delete
-    UseModal              On
-    ClickText             Delete
-    UseModal              Off
+
+    LaunchApp     Pranksters
+    ClickText     New
+    UseModal      On
+    TypeText      *Prankster Name             Test Prankster
+    ClickText     Save                        partial_match=False
+    UseModal      Off
+    ClickText     Delete                      anchor=PranksterTest Prankster
+    UseModal      On
+    ClickText     Delete
+    UseModal      Off
+    LaunchApp     Service
