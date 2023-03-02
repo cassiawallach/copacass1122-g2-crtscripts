@@ -8,7 +8,7 @@ Default Tags       dev1
 
 *** Test Cases ***
 Prankster Object Test
-    [Tags]         DM
+    [Tags]         DM    reg
     Home
     LaunchApp      Pranksters
     ClickText      New
