@@ -7,7 +7,7 @@ Suite Teardown    End suite
 Default Tags      dev1
 
 *** Test Cases ***
-Prankster Tracker App Test
+Prank Tracker App Test
     [Tags]        DM                        
     Home
     #launch DM Prank Tracker App
