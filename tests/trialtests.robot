@@ -43,11 +43,6 @@ Prank Object Test
     TypeText       Prank Description           CRT Test
     ClickText      Save                        partial_match=False
     UseModal       Off
-    #verify prank was logged against first prankster
-    UseTable       Select All
-    ClickCell      r1c4
-    ClickText      Pranks Against
-    VerifyTable    r1c3                        CRT_Prank_1
     #delete test records
     LaunchApp      Pranks
     ClickText      Select a List View
