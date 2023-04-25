@@ -92,7 +92,7 @@ Prank Tracker App Test
 
 
 Create House record 
-    [Tags]        int
+    [Tags]        int    reg
     Home
     LaunchApp     Houses
     ClickText     New
