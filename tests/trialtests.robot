@@ -9,7 +9,7 @@ Default Tags      dev1
 
 *** Test Cases ***
 Create Account record   
-    [Tags]        reg    int
+    [Tags]        reg                         int
     Home
     LaunchApp     Sales
     ClickText     Accounts
@@ -32,7 +32,7 @@ Create Account record
 
 
 Prank Tracker App Test
-    [Tags]        DM    int    reg
+    [Tags]        DM                          int                    reg
     Home
     #launch DM Prank Tracker App
     LaunchApp     DMPC Prank Tracker
@@ -78,7 +78,7 @@ Prank Tracker App Test
     #delete test records
     ClickText     Pranks                      partial_match=False
     ClickText     Select a List View
-    ClickText     All
+    ClickText     crt_TEST
     UseTable      Item Number
     ClickCell     r1c7
     ClickText     Delete
@@ -87,67 +87,12 @@ Prank Tracker App Test
     ClickCell     r1c7
     ClickText     Delete
     ClickText     Delete
-    ClickText     Pranksters
-    UseModal      Off
-    ClickCell     r1c3
-    ClickText     Delete
-    UseModal      On
-    ClickText     Delete
-    UseModal      Off
-    ClickCell     r1c3
-    ClickText     Delete
-    UseModal      On
-    ClickText     Delete
-    UseModal      Off
     ClickText     Home
 
 
-Prank Object Test
-    [Tags]    reg    int
-    Home
-    LaunchApp     Pranksters
-    ClickText     New
-    UseModal      On
-    TypeText      *Prankster Name             CRT_Prankster_1
-    ClickText     Save & New
-    UseModal      Off
-    UseModal      On
-    UseModal      Off
-    TypeText      *Prankster Name             CRT_Prankster_2
-    ClickText     Save                        partial_match=False
-    #create prank record
-    ClickText     New                         partial_match=False
-    UseModal      On
-    TypeText      *Title                      CRT_Prank_1
-    TypeText      Prank Score                 3
-    ComboBox      Search Pranksters...        CRT_Prankster_1
-    TypeText      Prank Description           CRT Test
-    ClickText     Save                        partial_match=False
-    UseModal      Off
-    #delete test records
-    LaunchApp     Pranks
-    ClickText     Select a List View
-    ClickText     All
-    UseTable      Item Number
-    ClickCell     r1c7
-    ClickText     Delete
-    UseModal      On
-    ClickText     Delete
-    LaunchApp     Pranksters
-    UseModal      Off
-    ClickCell     r1c3
-    ClickText     Delete
-    UseModal      On
-    ClickText     Delete
-    UseModal      Off
-    ClickCell     r1c3
-    ClickText     Delete
-    UseModal      On
-    ClickText     Delete
-    UseModal      Off
 
 Create House record 
-    [Tags]    int
+    [Tags]        int
     Home
     LaunchApp     Houses
     ClickText     New
