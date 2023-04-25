@@ -1,6 +1,7 @@
 *** Settings ***
 Library           QWeb
 Library           QForce
+Library           DataDriver                  encoding=utf_8         file=House.csv
 Resource          ../resources/common.robot
 Suite Setup       Setup Browser
 Suite Teardown    End suite
@@ -143,3 +144,25 @@ Prank Object Test
     UseModal      On
     ClickText     Delete
     UseModal      Off
+
+Create House record
+    Home
+    LaunchApp     Houses
+    ClickText     New
+    UseModal      On
+    TypeText      *House Name                 crt_testHOUSE
+    TypeText      Address                     123 North Street
+    TypeText      State                       CA
+    TypeText      City                        San Diego
+    TypeText      Zip                         92109
+    TypeText      Bedroom                     3
+    TypeText      Bathrooms                   2
+    TypeText      Price                       2000000
+    ClickText     Save                        partial_match=False
+    UseModal      Off
+    ClickText     Show more actions
+    ClickText     Delete
+    UseModal      On
+    ClickText     Delete
+    ClickText     Home
+
