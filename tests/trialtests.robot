@@ -9,7 +9,7 @@ Default Tags      dev1
 
 *** Test Cases ***
 Create Account record   
-    [Tags]        reg
+    [Tags]        reg    int
     Home
     LaunchApp     Sales
     ClickText     Accounts
@@ -32,7 +32,7 @@ Create Account record
 
 
 Prank Tracker App Test
-    [Tags]        DM
+    [Tags]        DM    int    reg
     Home
     #launch DM Prank Tracker App
     LaunchApp     DMPC Prank Tracker
@@ -103,6 +103,7 @@ Prank Tracker App Test
 
 
 Prank Object Test
+    [Tags]    reg    int
     Home
     LaunchApp     Pranksters
     ClickText     New
@@ -145,7 +146,8 @@ Prank Object Test
     ClickText     Delete
     UseModal      Off
 
-Create House record
+Create House record 
+    [Tags]    int
     Home
     LaunchApp     Houses
     ClickText     New
