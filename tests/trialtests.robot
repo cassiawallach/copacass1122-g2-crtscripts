@@ -136,3 +136,26 @@ Baked Goods object
     ClickText     Delete
     UseModal      On
     ClickText     Delete
+
+Shelley's Bakery app
+    [Tags]    int
+    Home
+    ClickText    New
+    TypeText    *Baked Good Name    CRT_Baked Good test
+    ClickText    Save    partial_match=False
+    ClickText    Related
+    ClickText    New
+    TypeText    *Recipe Name    CRT Recipe_test
+    ClickText    Save    partial_match=False
+    ClickText    Show more actions
+    ClickText    Delete
+    UseModal    On
+    ClickText    Delete
+    UseModal    Off
+    ClickText    No past activity. Past meetings and tasks marked as done show up here.
+    ClickText    Show more actions
+    ClickText    Delete
+    UseModal    On
+    ClickText    Delete
+    UseModal    Off
+    ClickText    Baked Good Name
