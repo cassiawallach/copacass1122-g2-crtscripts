@@ -92,7 +92,7 @@ Prank Tracker App Test
 
 
 Create House record 
-    [Tags]        int    reg
+    [Tags]        int                         reg
     Home
     LaunchApp     Houses
     ClickText     New
@@ -113,3 +113,17 @@ Create House record
     ClickText     Delete
     ClickText     Home
 
+Baked Goods object
+    [Tags]
+    Home
+    LaunchApp     Baked Goods
+    ClickText     New
+    UseModal      On
+    TypeText      *Baked Good Name            CRT_Test Baked Good
+    ClickText     Save                        partial_match=False
+    UseModal      Off
+    ClickText     Show more actions
+    ClickText     Delete
+    UseModal      On
+    ClickText     Delete
+    UseModal      Off
