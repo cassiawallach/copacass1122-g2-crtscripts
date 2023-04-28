@@ -114,7 +114,7 @@ Create House record
     ClickText     Home
 
 Baked Goods object
-    [Tags]    int
+    [Tags]        int
     Home
     LaunchApp     Baked Goods
     ClickText     New
@@ -122,6 +122,34 @@ Baked Goods object
     TypeText      *Baked Good Name            CRT_Test Baked Good
     ClickText     Save                        partial_match=False
     UseModal      Off
+    ClickText     Show more actions
+    ClickText     Delete
+    UseModal      On
+    ClickText     Delete
+    UseModal      Off
+
+Recipe object
+    [Tags]        int
+    Home
+    LaunchApp     Recipes
+    ClickText     New
+    UseModal      On
+    TypeText      *Recipe Name                CRT Recipe_test
+    ClickText     Search Baked Goods...
+    ClickText     New Baked Good
+    TypeText      Baked Good Name*            CRT Baked Good test
+    ClickText     Save                        anchor=Information
+    UseModal      Off
+    ClickText     Save                        partial_match=False
+    ClickText     CRT Baked Good test
+    ClickText     Show more actions
+    ClickText     Delete
+    UseModal      On
+    ClickText     Delete
+    UseModal      Off
+    VerifyText    Success\nBaked Good "CRT Baked Good test" was deleted
+    LaunchApp     Recipes
+    ClickText     CRT CRT Recipe_test
     ClickText     Show more actions
     ClickText     Delete
     UseModal      On
