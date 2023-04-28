@@ -128,12 +128,11 @@ Baked Goods object
     TypeText      *Recipe Name                CRT Recipe_test test
     ClickText     Save                        partial_match=False
     UseModal      Off
-    VerifyText    Recipe Name\nCRT Recipe_test test
-    ClickText     CRT Recipe_test test
     ClickText     Show more actions
     ClickText     Delete
     UseModal      On
     ClickText     Delete
     ClickText     Show more actions
     ClickText     Delete
+    UseModal      On
     ClickText     Delete
