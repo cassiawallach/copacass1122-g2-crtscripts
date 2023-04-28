@@ -114,7 +114,7 @@ Create House record
     ClickText     Home
 
 Baked Goods object
-    [Tags]
+    [Tags]    int
     Home
     LaunchApp     Baked Goods
     ClickText     New
