@@ -122,6 +122,15 @@ Baked Goods object
     TypeText      *Baked Good Name            CRT_Test Baked Good
     ClickText     Save                        partial_match=False
     UseModal      Off
+
+    ClickText    Related
+    ClickText    New    partial_match=False
+    UseModal    On
+    TypeText    *Recipe Name    CRT Recipe_test test
+    TypeText    //*[@id\='sectionContent-407']/div[1]/slot[1]/records-record-layout-row[3]/slot[1]/records-record-layout-item[1]/div[1]/span[1]/slot[1]/records-record-layout-rich-text[1]/lightning-quill[1]/lightning-input-rich-text[1]/div[1]/div[1]/div[1]/div[2]/div[1]    Test instructions
+    ClickText    Save    partial_match=False
+    UseModal    Off
+    VerifyText    Recipe Name\nCRT Recipe_test test
     ClickText     Show more actions
     ClickText     Delete
     UseModal      On
