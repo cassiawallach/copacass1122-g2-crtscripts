@@ -116,7 +116,7 @@ Create House record
 Baked Goods object
     [Tags]        int
     Home
-    LaunchApp     Baked Goods
+    LaunchApp     Shelley's Bakery Console
     ClickText     New
     UseModal      On
     TypeText      *Baked Good Name            CRT_Test Baked Good
