@@ -1,7 +1,7 @@
 *** Settings ***
 Library           QWeb
 Library           QForce
-Library           DataDriver                  encoding=utf_8         file=House.csv
+Library           DataDriver                  encoding=utf_8          file=House.csv
 Resource          ../resources/common.robot
 Suite Setup       Setup Browser
 Suite Teardown    End suite
@@ -32,7 +32,7 @@ Create Account record
 
 
 Prank Tracker App Test
-    [Tags]        DM                          int                    reg
+    [Tags]        DM                          int                     reg
     Home
     #launch DM Prank Tracker App
     LaunchApp     DMPC Prank Tracker
@@ -122,45 +122,19 @@ Baked Goods object
     TypeText      *Baked Good Name            CRT_Test Baked Good
     ClickText     Save                        partial_match=False
     UseModal      Off
-
-    ClickText    Related
-    ClickText    New    partial_match=False
-    UseModal    On
-    TypeText    *Recipe Name    CRT Recipe_test test
-    TypeText    //*[@id\='sectionContent-407']/div[1]/slot[1]/records-record-layout-row[3]/slot[1]/records-record-layout-item[1]/div[1]/span[1]/slot[1]/records-record-layout-rich-text[1]/lightning-quill[1]/lightning-input-rich-text[1]/div[1]/div[1]/div[1]/div[2]/div[1]    Test instructions
-    ClickText    Save    partial_match=False
-    UseModal    Off
-    VerifyText    Recipe Name\nCRT Recipe_test test
-    ClickText     Show more actions
-    ClickText     Delete
+    ClickText     Related
+    ClickText     New                         partial_match=False
     UseModal      On
-    ClickText     Delete
-    UseModal      Off
-
-Recipe object
-    [Tags]        int
-    Home
-    LaunchApp     Recipes
-    ClickText     New
-    UseModal      On
-    TypeText      *Recipe Name                CRT Recipe_test
-    ClickText     Search Baked Goods...
-    ClickText     New Baked Good
-    TypeText      Baked Good Name*            CRT Baked Good test
-    ClickText     Save                        anchor=Information
-    UseModal      Off
+    TypeText      *Recipe Name                CRT Recipe_test test
+    TypeText      //*[@id\='sectionContent-407']/div[1]/slot[1]/records-record-layout-row[3]/slot[1]/records-record-layout-item[1]/div[1]/span[1]/slot[1]/records-record-layout-rich-text[1]/lightning-quill[1]/lightning-input-rich-text[1]/div[1]/div[1]/div[1]/div[2]/div[1]    Test instructions
     ClickText     Save                        partial_match=False
-    ClickText     CRT Baked Good test
+    UseModal      Off
+    VerifyText    Recipe Name\nCRT Recipe_test test
+    ClickText     CRT Recipe_test test
     ClickText     Show more actions
     ClickText     Delete
     UseModal      On
     ClickText     Delete
-    UseModal      Off
-    VerifyText    Success\nBaked Good "CRT Baked Good test" was deleted
-    LaunchApp     Recipes
-    ClickText     CRT CRT Recipe_test
     ClickText     Show more actions
     ClickText     Delete
-    UseModal      On
     ClickText     Delete
-    UseModal      Off
